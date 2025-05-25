@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Rosa Eterna</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+<nav class="navbar">
+    <div class="nav-left"><a href="#">Accueil</a></div>
+<a href="personnaliser.html" target="_blank">🌹 Personnaliser</a>
+    <div class="nav-right">
+        <div class="cart-dropdown">
+            <button class="btn cart-toggle">🛒 Panier</button>
+            <div class="cart-content" id="cart">
+                <h3>Votre Panier</h3>
+                <ul id="cart-items"></ul>
+                <p>Total : <span id="cart-total">0</span> €</p>
+                <p class="note">📦 Expédié avec La Poste sous 3 à 5 jours ouvrés</p>
+                <a href="https://www.paypal.com/paypalme/rosa18000?country.x=FR&locale.x=fr_FR" target="_blank" class="btn big">Payer avec PayPal</a>
+            </div>
+        </div>
+    </div>
+</nav>
+<header>
+    <img src="images/logo.jpg" alt="Logo Rosa Eterna" class="logo">
+    <h1>Rosa Eterna</h1>
+    <p>Des roses qui ne fanent jamais, faites main avec amour 🌹</p>
+</header>
+<main>
+    <h2>Nos Bouquets</h2>
+    <div id="products">
+
+    <div class="product">
+        <img src="images/bouquet1.jpg" alt="Bouquet Passion">
+        <h3>Bouquet Passion</h3>
+        <p>Un mélange intense de rouge et de bleu, symbole d’amour et de loyauté.</p>
+        <p class="price">35 €</p>
+        <button class="btn" onclick="addToCart('Bouquet Passion', 35)">Ajouter au panier</button>
+    </div>
+    
+    <div class="product">
+        <img src="images/bouquet2.jpg" alt="Élégance">
+        <h3>Élégance</h3>
+        <p>Des tons ivoire, bleu et rouge qui incarnent douceur et noblesse.</p>
+        <p class="price">21 €</p>
+        <button class="btn" onclick="addToCart('Élégance', 21)">Ajouter au panier</button>
+    </div>
+    
+    <div class="product">
+        <img src="images/bouquet3.jpg" alt="Étoilé">
+        <h3>Étoilé</h3>
+        <p>Un bouquet bleu nuit rehaussé d’un papillon doré, parfait pour les grandes occasions.</p>
+        <p class="price">40 €</p>
+        <button class="btn" onclick="addToCart('Étoilé', 40)">Ajouter au panier</button>
+    </div>
+    
+    <div class="product">
+        <img src="images/bouquet4.jpg" alt="Romance">
+        <h3>Romance</h3>
+        <p>Bouquet tout rouge, symbole d’amour pur et profond.</p>
+        <p class="price">21 €</p>
+        <button class="btn" onclick="addToCart('Romance', 21)">Ajouter au panier</button>
+    </div>
+    
+    <div class="product">
+        <img src="images/bouquet5.jpg" alt="Tendresse">
+        <h3>Tendresse</h3>
+        <p>Rouges intenses avec une fleur blanche centrale, parfait pour exprimer l’affection.</p>
+        <p class="price">21 €</p>
+        <button class="btn" onclick="addToCart('Tendresse', 21)">Ajouter au panier</button>
+    </div>
+    
+    <div class="product">
+        <img src="images/bouquet6.jpg" alt="Fidélité">
+        <h3>Fidélité</h3>
+        <p>Fleur bleue au centre entourée de rouge, pour symboliser la loyauté.</p>
+        <p class="price">21 €</p>
+        <button class="btn" onclick="addToCart('Fidélité', 21)">Ajouter au panier</button>
+    </div>
+    
+    <div class="product">
+        <img src="images/bouquet7.jpg" alt="Individuel Classique">
+        <h3>Individuel Classique</h3>
+        <p>Roses emballées individuellement, parfaites pour un petit geste doux.</p>
+        <p class="price">3€ l'unité</p>
+        <button class="btn" onclick="addToCart('Individuel Classique', 3)">Ajouter au panier</button>
+    </div>
+    
+    <div class="product">
+        <img src="images/bouquet8.jpg" alt="Rouge & Or">
+        <h3>Bouquet Velours Royal</h3>
+        <p>
+
+
+Un bouquet élégant composé de roses satinées rouge rubis, symbole de passion et d’élégance intemporelle. Parfait pour déclarer son amour ou offrir un cadeau unique qui ne fane jamais..</p>
+        <p class="price">21 €</p>
+        <button class="btn" onclick="addToCart('Rouge & Or', 21)">Ajouter au panier</button>
+    </div>
+    
+    <div class="product">
+        <img src="images/bouquet9.jpg" alt="Classique Intemporel">
+        <h3>Bouquet Harmonie</h3>
+        <p>Un mélange éclatant de roses satinées rouge, rose, pêche et bleu, entourant une fleur blanche délicate. Ce bouquet symbolise l’unité dans la diversité, l’élégance et l’originalité. Idéal pour les personnes uniques qui méritent un cadeau à leur image.
+
+</p>
+        <p class="price">15 €</p>
+        <button class="btn" onclick="addToCart('Classique Intemporel', 15)">Ajouter au panier</button>
+    </div>
+    
+    <div class="product">
+        <img src="images/bouquet10.jpg" alt="Bouquet Papillon Doux ">
+        <h3>Bouquet Papillon Doux </h3>
+        <p>Un doux mélange de roses rouges et roses qui symbolisent la passion et la tendresse. Le papillon délicatement posé ajoute une touche de légèreté et de poésie, parfait pour transmettre un message d’amour pur et d’élégance.
+        <p class="price">21€</p>
+        <button class="btn" onclick="addToCart('Rouge Royal', 21)">Ajouter au panier</button>
+    </div>
+    
+    <div class="product">
+        <img src="images/bouquet11.jpg" alt="Fleur du Cœur">
+        <h3>Cœur Bleu Royal</h3>
+        <p>Un bouquet en forme de cœur, entièrement composé de roses satinées bleu nuit. Il incarne l’amour profond, mystérieux et sincère. Une déclaration unique, à la fois élégante et intense. Parfait pour celui ou celle qui fait battre ton cœur en silence..</p>
+        <p class="price">25 €</p>
+        <button class="btn" onclick="addToCart('Fleur du Cœur', 25)">Ajouter au panier</button>
+    </div>
+    
+    </div>
+
+<section id="commande">
+    <h2>Finaliser la commande</h2>
+    <form id="order-form">
+        <input type="text" id="name" placeholder="Nom complet" required />
+        <input type="text" id="address" placeholder="Adresse complète" required />
+        <input type="tel" id="phone" placeholder="Numéro de téléphone" required />
+        <button type="submit" class="btn">Valider la commande</button>
+    </form>
+    <div id="paypal-section" style="display:none;">
+        <h3>Scannez pour payer :</h3>
+        <img src="images/paypal_qr.jpeg" alt="QR PayPal" class="paypal-qr">
+        <p><a href="https://www.paypal.com/paypalme/rosa18000" target="_blank" class="btn">Payer avec PayPal</a></p>
+    </div>
+</section>
+
+</main>
+ <br>
+
+      </form>
+</section>
+
+<footer>
+    <div class="reseaux">
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=rosaeternaa18@gmail.com" target="_blank">
+  <img src="images/gmail.png" alt="Gmail" class="icon"> Gmail
+</a>
+
+        <a href="https://www.facebook.com/profile.php?id=61572701676809" target="_blank">
+  <img src="images/facebook.png" alt="Facebook" class="icon"> Facebook
+</a>
+
+        <a href="https://www.tiktok.com/@rosa.eterna23" target="_blank">
+            <img src="images/tiktok.png" alt="TikTok" class="icon"> TikTok
+        </a>
+    </div>
+</footer>
+</body>
+</html>
