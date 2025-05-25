@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Personnaliser votre fleur</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-left"><a href="index.html">🏠 Accueil</a></div>
+    </nav>
+
+    <header>
+        <h1>🌹 Personnalisez votre bouquet 🌹</h1>
+        <p>Créez un bouquet unique selon vos envies. Choisissez les couleurs, la quantité et ajoutez une note spéciale.</p>
+    </header>
+
+    <main style="padding: 2em;">
+        <form action="mailto:rosaeternaa18@gmail.com" method="post" enctype="text/plain">
+            <label>Nom :<br><input type="text" name="Nom" required></label><br><br>
+            <label>Adresse Email :<br><input type="email" name="Email" required></label><br><br>
+            <label>Nombre de fleurs :<br><input type="number" name="Quantité" min="1" max="50"></label><br><br>
+            <label>Couleurs souhaitées :</label><br>
+<input type="checkbox" name="Couleurs" value="Rouge"> 🌹 Rouge<br>
+<input type="checkbox" name="Couleurs" value="Rouge"> 🥀 Rouge Foncer<br>
+<input type="checkbox" name="Couleurs" value="Blanc"> 🤍 Blanc<br>
+<input type="checkbox" name="Couleurs" value="Bleu"> 💙 Bleu<br>
+<input type="checkbox" name="Couleurs" value="Rose"> 🌷 Rose<br>
+<input type="checkbox" name="Couleurs" value="Rose"> 🌸 Rose Claire<br>
+<input type="checkbox" name="Couleurs" value="GrisS"> ⚪ Gris<br><br>
+
+            <label>Message personnalisé :<br><textarea name="Message" rows="5" cols="30"></textarea></label><br><br>
+            <input type="submit" value="Envoyer la demande" class="btn">
+        </form>
+<!-- Aperçu du bouquet personnalisé -->
+<div id="bouquetPreview" class="bouquet-preview"></div>
+
+    </main>
+<script>
+function updateBouquet() {
+  const preview = document.getElementById("bouquetPreview");
+  preview.innerHTML = "";
+
+  const nb = parseInt(document.querySelector('input[name="Quantité"]').value || 0);
+  const couleurs = [...document.querySelectorAll('input[name="Couleurs"]:checked')].map(cb => cb.value);
+
+  for (let i = 0; i < nb; i++) {
+    const flower = document.createElement("div");
+    flower.classList.add("flower");
+
+    const colorMap = {
+      "Rouge": "red",
+      "Rouge Foncé": "#8B0000",
+      "Blanc": "white",
+      "Bleu": "#0000FF",
+      "Rose": "#ff69b4",
+      "Rose Claire": "#ffc0cb",
+      "Gris": "gray"
+    };
+
+    const couleur = couleurs[i % couleurs.length] || "gray";
+    flower.style.backgroundColor = colorMap[couleur] || "gray";
+
+    preview.appendChild(flower);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll('input[name="Couleurs"], input[name="Quantité"]').forEach(el => {
+    el.addEventListener("input", updateBouquet);
+  });
+
+  updateBouquet();
+});
+</script>
+
+</body>
+</html>
